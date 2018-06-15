@@ -1,0 +1,11 @@
+// Bootstrap Overrides
+$primary: #F7700F;
+$body-bg: #FBFBFB;
+
+// Other colors
+$facebook: #4072AB;
+$default-box-shadow: 0 0 4px 0 rgba(218, 218, 218, .5);
+$darker-box-shadow: 0 0 4px 0 rgba(218, 218, 218, .9);
+
+@import '../stylesheets/base/bootstrap-custom';
+
