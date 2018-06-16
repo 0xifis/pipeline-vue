@@ -1,0 +1,28 @@
+$list-bg: #E2E4E6;
+$list-border-radius: 6px;
+$list-separation: 10px;
+
+.lists-container {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.list {
+  display: inline-block;
+  margin-right: $list-separation;
+  border-radius: $list-border-radius;
+  background: $list-bg;
+  padding: 6px;
+  min-width: 300px;
+
+  &.new-list {
+    background: transparentize($list-bg, .5);
+  }
+}
+
+.list--title {
+  font-size: 1em;
+  font-weight: 600;
+}
