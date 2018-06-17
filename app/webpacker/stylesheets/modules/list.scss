@@ -6,6 +6,7 @@ $list-shadow: $default-shadow;
 .lists-container {
   display: flex;
   flex-flow: row nowrap;
+  align-items: flex-start;
   overflow-x: auto;
   padding: 10px 0;
 }

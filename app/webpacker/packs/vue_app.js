@@ -1,7 +1,7 @@
 /* eslint no-console: 0 */
 
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import Board from '../../components/board.vue'
 
 document.addEventListener('turbolinks:load', () => {
   const el = document.querySelector('#board')
@@ -11,8 +11,8 @@ document.addEventListener('turbolinks:load', () => {
       data: {
         lists: JSON.parse(el.dataset.lists)
       },
-      template: "<App :original_lists='lists' />",
-      components: { App }
+      template: "<Board :original_lists='lists' />",
+      components: { Board }
     })
   }
 })
