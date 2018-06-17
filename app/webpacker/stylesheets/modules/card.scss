@@ -1,0 +1,27 @@
+$card-border-radius: $list-border-radius;
+$card-bg: #FFFFFF;
+$card-shadow: $default-shadow;
+
+.card {
+  background: $card-bg;
+  border-radius: $card-border-radius;
+  margin: 5px 0;
+  box-shadow: $card-shadow;
+  padding: $card-border-radius;
+
+  &:hover {
+    background: darken($card-bg, 5);
+  }
+}
+
+.card-title {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.card-subtitle {
+  font-size: .8em;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+}

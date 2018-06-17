@@ -1,8 +1,4 @@
 %p#notice= notice
 .container-fluid
   %h1 Lists
-  .lists-container
-    - @lists.each do |list|
-      .list
-        %h2.list--title= list.name
-    = link_to 'New List', new_list_path, class: 'list new-list'
+  #board{data: { lists: @lists.to_json(include: [cards: { include: :listing }]) } }

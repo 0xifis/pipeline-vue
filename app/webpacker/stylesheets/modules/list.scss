@@ -1,6 +1,7 @@
 $list-bg: #E2E4E6;
 $list-border-radius: 6px;
 $list-separation: 10px;
+$list-shadow: $default-shadow;
 
 .lists-container {
   display: flex;
@@ -14,6 +15,7 @@ $list-separation: 10px;
   margin-right: $list-separation;
   border-radius: $list-border-radius;
   background: $list-bg;
+  box-shadow: $list-shadow;
   padding: 6px;
   min-width: 300px;
 
