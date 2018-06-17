@@ -1,5 +1,4 @@
 /* eslint no-console: 0 */
-
 import Vue from 'vue/dist/vue.esm'
 import Board from '../../components/board.vue'
 
