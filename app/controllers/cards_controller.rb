@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: [:show, :edit, :update, :destroy]
+  before_action :set_card, only: [:show, :edit, :update, :destroy, :move]
 
   # GET /cards
   # GET /cards.json
@@ -61,6 +61,11 @@ class CardsController < ApplicationController
     end
   end
 
+  def move
+    @card.update(card_params)
+    render action: :show
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_card
@@ -69,6 +74,6 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:position, :list, :listing)
+      params.require(:card).permit(:position, :list_id, :listing)
     end
 end
