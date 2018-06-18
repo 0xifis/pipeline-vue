@@ -1,0 +1,5 @@
+#board{data: { lists: @lists.to_json(include: [cards: { include: :listing }]) } }
+
+= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload'
+= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+= javascript_pack_tag 'vue_app', 'data-turbolinks-track': 'reload'

@@ -5,7 +5,7 @@
              @end='listMoved'
              class='lists-container'>
     <list v-for='(list, listIndex) in original_lists' v-bind='list' :key='listIndex'></list>
-    <a href='/lists/new' slot='footer' class='list new-list'> New List </a>
+    <!-- <a href='/lists/new' slot='footer' class='list new-list'> New List </a> -->
   </draggable>
 </template>
 
