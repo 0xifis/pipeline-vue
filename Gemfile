@@ -61,3 +61,5 @@ gem 'devise'
 gem 'acts_as_list'
 
 gem 'hamlit'
+
+gem 'activeadmin'
