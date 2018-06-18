@@ -16,4 +16,6 @@ ActiveAdmin.register Listing do
     @lists = List.sorted
   end
 
+  permit_params :tenant, :postcode
+
 end
