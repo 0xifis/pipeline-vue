@@ -1,24 +1,21 @@
 <template>
   <draggable id='app'
-             v-model='lists'
+             :list='lists'
              :options='{group: "lists"}'
              @end='listMoved'
              class='lists-container'>
     <list v-for='(list, listIndex) in original_lists' v-bind='list' :key='listIndex'></list>
-    <a href='/lists/new' class='list new-list'> New List </a>
+    <a href='/lists/new' slot='footer' class='list new-list'> New List </a>
   </draggable>
 </template>
 
 <script>
-import Draggable from 'vuedraggable'
-import List from './list.vue'
+import draggable from 'vuedraggable'
+import list from './list.vue'
 
 export default {
   props: ['original_lists'],
-  components: {
-    List,
-    Draggable,
-  },
+  components: { list, draggable },
   data: function() {
     return {
       lists: this.original_lists,
@@ -26,6 +23,8 @@ export default {
   },
   methods: {
     listMoved: function(event) {
+      console.log(event)
+      console.log(this.lists)
       var data = new FormData
       data.append('list[position]', event.newIndex + 1)
       Rails.ajax({
